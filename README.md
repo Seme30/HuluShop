@@ -10,7 +10,7 @@ This Android application is built using Kotlin and Jetpack Compose. The app focu
 * **Product Details:** View comprehensive information about individual products, including ratings and reviews.
 * **Category Filtering:** Browse products by category for easy navigation.
 * **Dark Mode Support:** Switch between light and dark themes for personalized viewing.
-* **User Authentication:** Secure login and registration for personalized experiences.
+* **User Authentication:** uses Firebase authentication using email and password.
 
 ## Technologies & Libraries
 

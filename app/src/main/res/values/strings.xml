@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hulugram Shop</string>
+    <string name="categories">Categories</string>
+    <string name="products">Products</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="trending">Trending</string>
+    <string name="electronics">Electronics</string>
+    <string name="jewelery">Jewelery</string>
+    <string name="men_cloth">Men\'s Clothing</string>
+    <string name="women_cloth">Women\'s Clothing</string>
+    <string name="search_hint">Search your products</string>
+    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="notifications">Notifications</string>
+    <string name="product_image">Product Image</string>
+    <string name="AllCategory">All</string>
+    <string name="no_product">No Products Found</string>
+
+</resources>

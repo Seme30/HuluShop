@@ -1,4 +1,4 @@
-# HulugramShop Android App (Project Name)
+# HulugramShop Android App
 
 ## Overview
 

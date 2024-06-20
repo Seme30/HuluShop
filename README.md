@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Android application is built using Kotlin and Jetpack Compose. The app focuses on a clean and intuitive user interface, responsive design, and efficient data handling.
+This Android application is built using Kotlin and Jetpack Compose. The app focuses on a clean and intuitive user interface, clean architecture, and efficient ui state handling.
 
 ## Features
 

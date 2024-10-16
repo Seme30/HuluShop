@@ -114,7 +114,9 @@ fun MainScreen(
                 1 -> ProductScreen(
                     navHostController
                 )
-                2 -> CartScreen()
+                2 -> CartScreen(
+                    navHostController
+                )
                 3 -> ProfileScreen(
                     navController = navHostController
                 )

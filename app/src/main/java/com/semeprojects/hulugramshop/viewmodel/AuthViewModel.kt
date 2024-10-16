@@ -23,6 +23,9 @@ class AuthViewModel @Inject constructor(
     private val userRepository: FirebaseUserRepository
 ) : ViewModel() {
 
+    private val _user = MutableStateFlow<User?>(null)
+    val user: StateFlow<User?> = _user
+
     private val _authState = MutableStateFlow<AuthState>(AuthState.Unauthenticated)
     val authState: StateFlow<AuthState> = _authState.asStateFlow()
 
@@ -38,6 +41,7 @@ class AuthViewModel @Inject constructor(
             } else {
                 AuthState.Unauthenticated
             }
+            _user.value = User("1", "John Doe", "john.doe@example.com")
         }
     }
 

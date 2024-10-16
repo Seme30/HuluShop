@@ -20,6 +20,7 @@ splashscreen = "1.0.1"
 icons = "1.7.0-beta03"
 accompanist = "0.32.0"
 coil = "2.4.0"
+room = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +52,13 @@ compose-material-icons-extended = { module = "androidx.compose.material:material
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
 accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanist" }
 coil-compose = {module = "io.coil-kt:coil-compose", version.ref="coil" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+
+[bundles]
+room = ["room-runtime", "room-ktx"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

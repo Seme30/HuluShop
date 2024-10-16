@@ -1,8 +1,8 @@
 package com.semeprojects.hulugramshop.ui.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollState
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,14 +19,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonColors
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -37,15 +34,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
 import com.semeprojects.hulugramshop.data.network.model.Product
-import com.semeprojects.hulugramshop.data.network.model.Rating
 import com.semeprojects.hulugramshop.ui.components.HButton
+import com.semeprojects.hulugramshop.viewmodel.CartViewModel
 import com.semeprojects.hulugramshop.viewmodel.ProductDetailUIState
 import com.semeprojects.hulugramshop.viewmodel.ProductDetailViewModel
 
@@ -95,7 +90,8 @@ fun ProductDetailScreen(
 fun ProductDetailContent(
     scrollState: ScrollState,
     product: Product,
-    navHostController: NavHostController
+    navHostController: NavHostController,
+    viewModel: CartViewModel = hiltViewModel()
 ){
 
     Column(
@@ -223,7 +219,12 @@ fun ProductDetailContent(
                 "Add to Cart",
 
                 ) {
-
+                viewModel.addToCart(product)
+                Toast.makeText(
+                    navHostController.context,
+                    "Product added to cart",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
             Spacer(modifier = Modifier.height(40.dp))

@@ -86,6 +86,10 @@ dependencies {
     // datastore
     implementation(libs.androidx.datastore)
 
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+
 
     //splash screen
     implementation(libs.core.splashscreen)

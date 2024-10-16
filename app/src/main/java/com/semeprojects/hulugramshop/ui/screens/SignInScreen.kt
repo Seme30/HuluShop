@@ -59,9 +59,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun SignInScreen(
     navController: NavHostController,
-
 ) {
-//
     val authViewModel: AuthViewModel = hiltViewModel()
     val email = remember { mutableStateOf("") }
     val password = remember { mutableStateOf("") }
@@ -184,6 +182,18 @@ fun SignInScreen(
                                             ).show()
                                         }
                                     }
+                                }
+                            }
+                        },
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    HButton(
+                        text = "Continue as Guest",
+                        click = {
+                            navController.navigate(Screens.Main.route) {
+                                popUpTo(navController.graph.startDestinationId) {
+                                    inclusive = true
                                 }
                             }
                         },
